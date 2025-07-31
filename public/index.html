@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat AI With Erlann</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>💬 Riwayat Chat</h2>
+                <button id="newChatBtn" class="new-chat-btn">+ Chat Baru</button>
+            </div>
+            
+            <div class="chat-history" id="chatHistory">
+                <div class="history-item active" data-chat-id="current">
+                    <div class="history-title">Chat Saat Ini</div>
+                    <div class="history-preview">Mulai percakapan...</div>
+                    <div class="history-time">Sekarang</div>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <button id="toggleSidebar" class="toggle-btn">←</button>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="main-content">
+            <div class="chat-container">
+                <header class="chat-header">
+                    <div class="header-left">
+                        <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+                        <h1>Chat AI <strong>Erlann</strong></h1>
+                    </div>
+                    <button id="clearBtn" class="clear-btn">🗑️ Bersihin Obrolan</button>
+                </header>
+                        
+                <div class="chat-messages" id="chatMessages">
+                    <div class="welcome-message">
+                        <div class="message ai-message">
+                            <div class="message-content">
+                                <p>Eh, halo! 👋 Aku Erlann asisten AI yang santai, Jangan sungkan buat nanya apa aja atau sekadar ngobrol - aku di sini buat bantu dan seru-seruan! 😊</p>
+                            </div>
+                            <div class="message-time" id="welcomeTime"></div>
+                        </div>
+                    </div>
+                </div>
+                        
+                <form class="chat-input-form" id="chatForm">
+                    <div class="input-container">
+                        <input 
+                            type="text" 
+                            id="messageInput" 
+                            placeholder="Ketik pesanmu di sini... 💬"
+                            autocomplete="off"
+                            required
+                        >
+                        <button type="submit" id="sendBtn">
+                            <span class="send-text">Kirim</span>
+                            <span class="send-icon">🚀</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <div class="loading" id="loading">
+        <div class="typing-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <p>Bentar Erlann lagi mikir... 🤔</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
